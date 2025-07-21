@@ -13,7 +13,8 @@ RUN npm run build || echo "Build step skipped or not defined"
 # Use Nginx to serve the static build
 FROM nginx:alpine
 
-COPY --from=build /app/dist /usr/share/nginx/html
+# FIXED: Use the correct folder: build (React) instead of dist
+COPY --from=build /app/build /usr/share/nginx/html
 
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
