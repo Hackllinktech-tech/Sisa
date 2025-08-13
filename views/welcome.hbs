@@ -1,5 +1,73 @@
 {{> nHeader }}
 
+<style>
+  :root {
+    --accent: #ff00aa;
+    --accent2: #9900ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #0d0d0d, #1a1a1a);
+    color: #fff;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: -50%;
+    background: conic-gradient(var(--accent), var(--accent2), #00ffee, var(--accent));
+    filter: blur(200px);
+    z-index: 0;
+    animation: spin 14s linear infinite;
+  }
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  .notes_wrapper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+  }
+  .welcome_div {
+    background: rgba(20, 20, 20, 0.9);
+    border-radius: 14px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,255,255,0.03);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .welcome_div img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  .github-stats {
+    position: relative;
+    z-index: 1;
+    margin-top: 1.5rem;
+    background: rgba(20, 20, 20, 0.8);
+    padding: 1rem 1.5rem;
+    border-radius: 14px;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.4);
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .github-stats iframe {
+    filter: drop-shadow(0 0 5px var(--accent));
+  }
+</style>
+
 <div class="notes_wrapper">
   <div class="welcome_div">
     <img src="/images/omg.png" alt="">
@@ -7,9 +75,9 @@
 </div>
 
 <div class="github-stats">
-  <iframe src="https://ghbtns.com/github-btn.html?user=yTakkar&type=follow&count=false&size=large" frameborder="0" scrolling="0" width="180px" height="30px"></iframe>
-  <iframe src="https://ghbtns.com/github-btn.html?user=yTakkar&repo=React-Instagram-Clone-2.0&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="125px" height="30px"></iframe>
-  <iframe src="https://ghbtns.com/github-btn.html?user=yTakkar&repo=React-Instagram-Clone-2.0&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+  <iframe src="https://ghbtns.com/github-btn.html?user=yTakkjar&type=follow&count=false&size=large" frameborder="0" scrolling="0" width="180px" height="30px"></iframe>
+  <iframe src="https://ghbtns.com/github-btn.html?user=yTakkjar&repo=React-Instagram-Clone-2.0&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="125px" height="30px"></iframe>
+  <iframe src="https://ghbtns.com/github-btn.html?user=yTakkajr&repo=React-Instagram-Clone-2.0&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
 </div>
 
 {{> footer }}
