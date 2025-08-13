@@ -1,12 +1,125 @@
 {{> nHeader }}
 
-<div class="notes_wrapper">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f0f0f;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #021B79, #0575E6);
+  }
+  .notes_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  .register.cua {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(5, 230, 255, 0.5);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+  }
+  .register.cua .display_text span {
+    display: block;
+    color: #05e6ff;
+    text-shadow: 0 0 10px #05e6ff;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+  }
+  .register.cua input[type="text"],
+  .register.cua input[type="email"],
+  .register.cua input[type="password"] {
+    width: 80%;
+    padding: 12px;
+    margin: 10px auto;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    display: block;
+  }
+  .register.cua input:focus {
+    box-shadow: 0 0 8px #05e6ff;
+  }
+  .register.cua .s_submit {
+    width: 80%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #05e6ff;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 12px;
+  }
+  .register.cua .s_submit:hover {
+    box-shadow: 0 0 15px #05e6ff;
+  }
+  .log_sign {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .pri_btn {
+    background: #05e6ff;
+    color: black;
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .pri_btn:hover {
+    box-shadow: 0 0 10px #05e6ff;
+  }
+  .username_checker {
+    font-size: 0.9rem;
+    margin: 5px auto;
+    color: #ff4d4d;
+  }
+  .terms_div {
+    margin-top: 15px;
+    text-align: left;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.85rem;
+  }
+  .terms_div a {
+    color: #05e6ff;
+    text-decoration: none;
+  }
+  .terms_div a:hover {
+    text-shadow: 0 0 5px #05e6ff;
+  }
+  @media (max-width: 768px) {
+    .register.cua {
+      padding: 20px;
+    }
+    .register.cua input,
+    .register.cua .s_submit {
+      width: 100%;
+    }
+  }
+</style>
 
+<div class="notes_wrapper">
   <div class="log_sign">
     <a href="/login" class="pri_btn">Already have an account?</a>
   </div>
 
-  <div class="register cua ">
+  <div class="register cua">
     <div class="display_text">
       <span>Get started now and let the fun begins</span>
     </div>
@@ -31,10 +144,9 @@
           <a href="/terms" class="a_pri">Instagram Terms</a>
         </label>
       </div>
-      <input type="submit" name="" value="Signup For Free" class="s_submit">
+      <input type="submit" value="Signup For Free" class="s_submit">
     </form>
   </div>
-
 </div>
 
 {{> footer }}
